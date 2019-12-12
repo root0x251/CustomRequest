@@ -21,65 +21,6 @@ import java.util.regex.Pattern;
 
 public class WikiCustomRequest {
 
-//    public void getSearchRequestWithParam(String urlString, Map<String, String> keyValParam) throws URISyntaxException, IOException {
-//        CloseableHttpClient httpClient = HttpClients.createDefault();
-//
-//        URIBuilder builder = new URIBuilder(urlString);
-//
-//
-//
-//        for (Map.Entry<String, String> entry : keyValParam.entrySet()) {
-//            builder.addParameter(entry.getKey(), entry.getValue());
-//        }
-//
-//        try {
-//            HttpGet request = new HttpGet(builder.build());
-//            // add request headers
-//            request.addHeader(HttpHeaders.ACCEPT_CHARSET, "utf-8");
-//            request.addHeader(HttpHeaders.ACCEPT_LANGUAGE, "ru");
-//
-//            CloseableHttpResponse response = httpClient.execute(request);
-//            try {
-//                HttpEntity entity = response.getEntity();
-//                if (entity != null) {
-//                    // return it as a String
-//                    String result = EntityUtils.toString(entity);
-////                    System.out.println(result);
-//
-//
-//                    ObjectMapper mapper = new ObjectMapper();
-//
-//
-//
-//
-//                    try {
-//
-//                        // convert JSON string to Map
-//                        Map<String, String> map = mapper.readValue(result, Map.class);
-//
-//                        // it works
-//                        //Map<String, String> map = mapper.readValue(json, new TypeReference<Map<String, String>>() {});
-//
-//                        System.out.println(map);
-//                    } catch (IOException e) {
-//                        e.printStackTrace();
-//                    }
-//
-//
-//
-//
-//
-//                }
-//            } finally {
-//                response.close();
-//            }
-//        } finally {
-//            httpClient.close();
-//        }
-//
-//    }
-
-
     public void getSearchRequestWithParam(String searchRequest) throws IOException, URISyntaxException {
         // create URL
         if (searchRequest != null) {

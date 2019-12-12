@@ -1,4 +1,5 @@
 import com.wikiCustomRequest.SlavaBortn.WikiCustomRequest;
+import com.yandexCustomRequest.SlavaBortn.YandexCustomRequest;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -14,15 +15,22 @@ public class Main {
 
     public static void main(String[] args) throws IOException, URISyntaxException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String searchRequest = reader.readLine();
+        String string = reader.readLine();
+
         WikiCustomRequest wikiCustomRequest = new WikiCustomRequest();
+        YandexCustomRequest yandexCustomRequest = new YandexCustomRequest();
 
 
-        // search in wikipedia
-        while (searchRequest != null) {
-            wikiCustomRequest.getSearchRequestWithParam(searchRequest);
-            searchRequest = reader.readLine();
+        while (!string.equals("")) {
+            // wiki search
+//            wikiCustomRequest.getSearchRequestWithParam(string);
+
+            // yandex translator en -> ru
+            yandexCustomRequest.getTranslateRequest(string);
+            string = reader.readLine();
         }
+
+
 
 
 
